@@ -57,8 +57,7 @@ The encode function converts a number x to a 12-bit binary string. The conversio
 ```
 # Decoding Function
 The decode function converts a 12-bit binary string back to a floating-point number by interpreting the binary string as an integer and dividing by 64:
-python
-```
+```python
 def decode(binary):
     """Convert a binary string to a number."""
     return int(binary, 2) / 64
@@ -66,8 +65,7 @@ def decode(binary):
 # Crossover Function
 The crossover function performs a single-point crossover between two parent binary strings. A random crossover point is chosen, and the binary strings are split and recombined to form two new offspring:
 
-python
-````
+```python
 def crossover(parent1, parent2):
     """Perform two-point crossover between parents."""
     point = random.randint(1, len(parent1) - 1)
@@ -75,12 +73,11 @@ def crossover(parent1, parent2):
     child2 = parent2[:point] + parent1[point:]
     return child1, child2
 
-````
+```
 # Genetic Algorithm Function
 he genetic_algorithm function initializes a population of random binary strings, then iteratively evolves the population over a specified number of generations. The fitness of each individual is calculated based on the absolute value of the equation 4 $𝑥^2 $−25 = 0 , Individuals with better fitness are more likely to be selected as parents. New offspring are created through crossover and replace the old population. The best solution found is returned at the end:
 
-python
-Copy code
+```python
 def genetic_algorithm():
     """Run a simple genetic algorithm to find solution for 4x^2 - 25 = 0."""
     population = [''.join(random.choice('01') for _ in range(12)) for _ in range(10)]
@@ -107,13 +104,14 @@ def genetic_algorithm():
 result = genetic_algorithm()
 print(f"Approximate solution: {result}")
 print(f"F({result}) = {4 * result**2 - 25}")
-
+```
  # Usage
 Run the script to execute the genetic algorithm and print the approximate solution and its evaluation:
 
-bash
-Copy code
+# Bash
+```bash
 python genetic_algorithm.py
+```
 The output will be an approximate solution to the equation 
 4 $𝑥^2−25=0 and the evaluation of the equation at that solution.
 
