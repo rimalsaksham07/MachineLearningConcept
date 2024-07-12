@@ -48,24 +48,26 @@ Once finished, you can shut down Jupyter Notebook by pressing Ctrl + C in the te
 
 # Encoding Function
 The encode function converts a number x to a 12-bit binary string. The conversion involves multiplying 𝑥 by 64 and formatting the result as a binary string:
-python
-Copy code
-def encode(x):
-    """Convert a number to binary string."""
-    return format(int(x * 64), '012b')
+
+
+```python
+  def encode(x):
+      """Convert a number to binary string."""
+       return format(int(x * 64), '012b')
+```
 # Decoding Function
 The decode function converts a 12-bit binary string back to a floating-point number by interpreting the binary string as an integer and dividing by 64:
 python
-Copy code
+```
 def decode(binary):
     """Convert a binary string to a number."""
     return int(binary, 2) / 64
-
+```
 # Crossover Function
 The crossover function performs a single-point crossover between two parent binary strings. A random crossover point is chosen, and the binary strings are split and recombined to form two new offspring:
 
 python
-Copy code
+````
 def crossover(parent1, parent2):
     """Perform two-point crossover between parents."""
     point = random.randint(1, len(parent1) - 1)
@@ -73,6 +75,7 @@ def crossover(parent1, parent2):
     child2 = parent2[:point] + parent1[point:]
     return child1, child2
 
+````
 # Genetic Algorithm Function
 he genetic_algorithm function initializes a population of random binary strings, then iteratively evolves the population over a specified number of generations. The fitness of each individual is calculated based on the absolute value of the equation 4 $𝑥^2 $−25 = 0 , Individuals with better fitness are more likely to be selected as parents. New offspring are created through crossover and replace the old population. The best solution found is returned at the end:
 
