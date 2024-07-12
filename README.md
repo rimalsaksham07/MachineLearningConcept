@@ -22,7 +22,7 @@ To run this project locally,follow these steps:
 
    ```sh
    git clone https://github.com/rimalsaksham07/Genetic-Algorithm.git
-   cd Genetic_Algorithm
+
 
 2. **Install Jupyter Notebook and dependencies:**
  Install Jupyter Notebook and other dependencies using pip.
