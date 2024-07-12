@@ -6,6 +6,7 @@ This program uses a genetic algorithm to find an approximate solution to the equ
 The program consists of the following key components:
 # Encoding and Decoding Functions
 encode(x): Converts a floating-point number to a 12-bit binary string.
+
 decode(binary): Converts a 12-bit binary string back to a floating-point number.
 
 Crossover Function
