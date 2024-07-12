@@ -1,6 +1,6 @@
-# Genetic Algorithm to Solve 4$𝑥^2$−25=0
+# Genetic Algorithm to Solve 4 $𝑥^2$−25=0
 # Overview
-This program uses a genetic algorithm to find an approximate solution to the equation 4$𝑥^2$−25=0 .The algorithm encodes potential solutions as binary strings, evaluates their fitness based on the given equation, and iteratively evolves the population of solutions through crossover operations.
+This program uses a genetic algorithm to find an approximate solution to the equation 4 $𝑥^2$−25=0 .The algorithm encodes potential solutions as binary strings, evaluates their fitness based on the given equation, and iteratively evolves the population of solutions through crossover operations.
 
 # Structure
 The program consists of the following key components:
@@ -75,11 +75,11 @@ def crossover(parent1, parent2):
 
 ```
 # Genetic Algorithm Function
-he genetic_algorithm function initializes a population of random binary strings, then iteratively evolves the population over a specified number of generations. The fitness of each individual is calculated based on the absolute value of the equation 4$𝑥^2 $−25 = 0 , Individuals with better fitness are more likely to be selected as parents. New offspring are created through crossover and replace the old population. The best solution found is returned at the end:
+he genetic_algorithm function initializes a population of random binary strings, then iteratively evolves the population over a specified number of generations. The fitness of each individual is calculated based on the absolute value of the equation 4 $𝑥^2 $−25 = 0 , Individuals with better fitness are more likely to be selected as parents. New offspring are created through crossover and replace the old population. The best solution found is returned at the end:
 
 ```python
 def genetic_algorithm():
-    """Run a simple genetic algorithm to find solution for 4$x^2$ - 25 = 0."""
+    """Run a simple genetic algorithm to find solution for 4 $x^2$ - 25 = 0."""
     population = [''.join(random.choice('01') for _ in range(12)) for _ in range(10)]
     
     for _ in range(50):  # Number of generations
@@ -113,7 +113,7 @@ Run the script to execute the genetic algorithm and print the approximate soluti
 python genetic_algorithm.py
 ```
 The output will be an approximate solution to the equation 
-4$𝑥^2$−25=0 and the evaluation of the equation at that solution.
+4 $𝑥^2$−25=0 and the evaluation of the equation at that solution.
 
 # Dependencies
 The program requires Python 3.6 or higher.
